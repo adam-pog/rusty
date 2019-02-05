@@ -1,0 +1,8 @@
+[package]
+name = "big_nums"
+version = "0.1.0"
+authors = ["Adam Pogwizd <adam.pogwizd@yello.co>"]
+edition = "2018"
+
+[dependencies]
+rug = "1.3.0"
