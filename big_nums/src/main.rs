@@ -10,5 +10,6 @@ fn main() {
 //    let bound = a;
     let i = Integer::from(a.random_below_ref(&mut rand));
     let t = Integer::from(a.random_below_ref(&mut rand));
+    println!("Hello, {:?}", i);
     println!("Hello, {:?}", t);
 }
