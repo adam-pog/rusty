@@ -1,4 +1,6 @@
 fn main() {
+    use std::collections::HashMap;
+
     let v = vec![1];
     let mut v2 = vec![v];
     v2[0][0] = 2;
@@ -32,7 +34,31 @@ fn main() {
 
     let s1 = String::from("Hello, ");
     let s2 = String::from("world!");
-    let s3 = s1 + &s2;
+    let _s3 = s1 + &s2;
 
     //println!("{}", s1); not valid since s1 has been moved
+
+    let field_name = String::from("Favorite color");
+    let field_value = String::from("Blue");
+
+    let mut map = HashMap::new();
+    map.insert(field_name, field_value);
+    // println!("{}",field_name); fails since it becomes owned by map
+
+    let field_name = String::from("Favorite color");
+    let field_value = 5;
+
+    let mut map = HashMap::new();
+    map.insert(field_name, field_value);
+    if let Some(v) =  map.get("Favorite color") {
+        println!("{}", v);
+    }
+
+    let mut scores = HashMap::new();
+    scores.insert(String::from("Blue"), 10);
+
+    scores.entry(String::from("Yellow")).or_insert(50);
+    scores.entry(String::from("Blue")).or_insert(50);
+
+    println!("{:?}", scores);
 }
