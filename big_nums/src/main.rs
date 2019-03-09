@@ -8,8 +8,8 @@ fn main() {
    // let c = a.to_string_radix(29);
     let mut rand = RandState::new();
 //    let bound = a;
-    let i = Integer::from(a.random_below_ref(&mut rand));
-    let t = Integer::from(a.random_below_ref(&mut rand));
-    println!("Hello, {:?}", i);
-    println!("Hello, {:?}", t);
+    let _i = Integer::from(a.random_below_ref(&mut rand));
+    let _t = Integer::from(a.random_below_ref(&mut rand));
+//    println!("Hello, {:?}", i);
+//    println!("Hello, {:?}", t);
 }
